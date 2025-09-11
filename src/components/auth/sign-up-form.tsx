@@ -59,8 +59,8 @@ export function SignUpForm({ className, ...props }: React.ComponentPropsWithoutR
     <div className='justify-center grid grid-cols-1 md:grid-cols-4 items-center '>
 
       <div className='col-span-4 text-center mb-6 '>
-        <h1 style={{ fontWeight: 'bold', fontSize: 'xxx-large' }}>Quint Accounting</h1>
-        <p style={{ color: "D9D9D9" }}>Tu mejor elección contable</p>
+        <h1 style={{ fontWeight: 'bold', fontSize: 'xxx-large' }}>Your App Name</h1>
+        <p style={{ color: "D9D9D9" }}>Your app slogan</p>
       </div>
 
       {/* col-span-x indica el numero de columnas que ocupará el elemento */}

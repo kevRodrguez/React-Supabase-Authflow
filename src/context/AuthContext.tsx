@@ -52,7 +52,8 @@ export function AuthProvider({ children }: PropsWithChildren) {
         // Carga inicial de sesión
         supabase.auth.getSession()
             .then(({ data }: { data: { session: Session | null } }) => {
-                console.log("[AuthContext] Session loaded:", data.session);
+                // uncommment to debug
+                // console.log("[AuthContext] Session loaded:", data.session);
                 setSession(data.session);
                 setIsLoggedIn(!!data.session);
             })
@@ -70,11 +71,6 @@ export function AuthProvider({ children }: PropsWithChildren) {
             console.log("[AuthContext] Auth state changed:", event, session?.user?.email);
             setSession(session);
             setIsLoggedIn(!!session);
-
-            // Si la sesión se invalida (logout/expired), llevar al login
-            //   if (!session) {
-            //     navigate('/login');
-            //   }
         });
 
         return () => {
